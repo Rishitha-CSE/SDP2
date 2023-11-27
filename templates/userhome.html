@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+body{
+            background-image: url("static/images/food.png");
+            background-size: cover;
+        }
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: aliceblue;
+            border-radius: 35px;
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style-type: none;
+            list-style: none;
+            margin: 13px 20px;
+        }
+        .navbar li a{
+            padding: 3px;
+            text-decoration: dotted;
+            text-decoration-color: red;
+        }
+        .navbar li a:hover{
+            color: orange;
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<h1 align=center>PFSD Django Web Application</h1>
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'userhome' %}">Home</a></li>
+                <li><a href="{% url 'changepwd' %}">Change Password</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br>
+
+
+  <h1>I am in User Home</h1>
+
+
+
+</body>
+</html>

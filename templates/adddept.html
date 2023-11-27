@@ -1,0 +1,299 @@
+{% extends 'adminhome.html' %}
+{% load static %}
+
+<html>
+<head>
+
+     <title>
+        {% block 'title' %}
+        Add Department
+        {% endblock %}
+    </title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+ {% block 'style' %}
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: orange;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+input[type=text],input[type=password],input[type=number],input[type=email],
+select,input[type=date]
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label
+{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+{% endblock %}
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+{% block 'body' %}
+
+<div class="menu" id="Menu">        <h1>Our<span>Menu</span></h1>
+        <div class="menu_box">
+            <div class="menu_card">
+                <div class="menu_image">                    <img src="static/image/buger.jpg">
+                </div>
+                <div class="small_card">                    <i class="fa-solid fa-heart"></i>
+                </div><div class="menu_info">
+                    <h2>1.Buger</h2>                    <p>
+                        A hamburger,  is a sandwich consisting of filling usually a patty of ground meat, typically beef placed inside a                        sliced bun or bread roll.
+                    </p>                    <h3>Rs.199.60</h3>
+                    <div class="menu_icon">                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/pasta.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>2.Pasta</h2>                    <p>
+                        Pasta is a type of food typically made from an unleavened dough of wheat flour mixed with water or eggs                    </p>
+                    <h3>Rs.250.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/lasagna.webp">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>3.Lasagna</h2>                    <p>
+                        This lasagna recipe from John Chandler is our most popular recipe! With sausage, ground beef, basil, and 3 types of cheese                    </p>
+                    <h3>Rs.399.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/chocolate_Drink.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>4.Drink</h2>                    <p>
+                       A milkshake is a sweet beverage made by blending milk, ice cream, and flavorings or sweeteners                    </p>
+                    <h3>Rs.69.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+
+            </div>
+            <div class="menu_card"><div class="menu_image">
+                    <img src="static/image/pizza.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>5.Pizza</h2>                    <p>
+                        Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped                    </p>
+                    <h3>Rs.290.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/Hot_dog.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>6.Hot Dog</h2>                    <p>
+                        A hot dog (commonly spelled hotdog) is a food consisting of a grilled or steamed sausage served in the slit                        of a partially sliced bun.
+                    </p>                    <h3>Rs.259.00</h3>
+                    <div class="menu_icon">                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">                    <img src="static/image/juse.jpg">
+                </div>
+                <div class="small_card">                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">                    <h2>7.Juice</h2>
+                    <p>                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>                    <h3>Rs.160.60</h3>
+                    <div class="menu_icon">                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">                    <img src="static/image/biryani.webp">
+                </div>
+                <div class="small_card">                    <i class="fa-solid fa-heart"></i>
+                </div><div class="menu_info">
+                    <h2>8.Biryani</h2>                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates                    </p>
+                    <h3>Rs.300.50</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa
+                        -star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/chocolate.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>9.Chocolate</h2>                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates                    </p>
+                    <h3>Rs.99.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/ice_cream.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>10.Ice Cream</h2>                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates                    </p>
+                    <h3>Rs.239.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/Spanchi.jpg">                </div>
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>                </div>
+                <div class="menu_info">
+                    <h2>11.Spanchi</h2>                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates                    </p>
+                    <h3>Rs.200.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+            <div class="menu_card">
+                <div class="menu_image">
+                    <img src="static/image/sandwich.jpg">                </div>
+<div class="small_card">                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="menu_info">
+                    <h2>12.Sandwich</h2>                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates                    </p>
+                    <h3>Rs.200.00</h3>                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>                </div>
+            </div>
+        </div>
+<h3 align="center"><mark>{{msg}}</mark></h3>
+
+<h3 align="Center"><u>Add Order</u></h3>
+
+
+<form method="post">
+    {% csrf_token %}
+
+<table align=center>
+
+    {% for field in deptform %}
+
+<tr>
+<td><label>{{field.label}}</label></td>
+<td>{{field}}</td>
+</tr>
+
+    {% endfor %}
+
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Add" class="button"></td>
+</tr>
+
+</table>
+
+</form>
+
+
+{% endblock %}
+
+</body>
+</html>

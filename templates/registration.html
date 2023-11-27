@@ -1,0 +1,182 @@
+{% load static %}
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+input[type=text],input[type=password],input[type=number],input[type=email],
+select,input[type=date]
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label
+{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+<!--<h1 align=center>PFSD Django Web Application</h1>-->
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+<!--                <li><a href="{% url 'about' %}">About</a></li>-->
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br>
+
+<form method="post" >
+{% csrf_token %}
+<table align=center>
+
+<tr>
+<td><label>Name</label></td>
+<td>
+<input type="text" name="name" required="required"></input>
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Gender</label></td>
+<td>
+<input type="radio" name="gender" value="Male" required="required"/>Male
+<input type="radio" name="gender" value="Female" required="required"/>Female
+</td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Date of Birth</label></td>
+<td><input type="date" name="dateofbirth" required="required" placeholder="DD/MM/YYYY"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+
+
+
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Location</label></td>
+<td><input type="text" name="location" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Email ID</label></td>
+<td><input type="email" name="emailid" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Username</label></td>
+<td><input type="text" name="username" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Password</label></td>
+<td><input type="password" name="password" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td><label>Contact No</label></td>
+<td><input type="number" name="contactno" required="required"/></td>
+</tr>
+
+<tr><td></td></tr>
+<tr><td></td></tr>
+
+<tr align=center>
+<td colspan=2><input type="submit" value="Register" class="button"></td>
+</tr>
+
+</table>
+
+</form>
+
+
+</div>
+</div>
+
+</body>
+</html>

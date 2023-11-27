@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<style>
+
+* {
+   box-sizing: border-box;
+}
+.imageColumn {
+   float: left;
+   width: 25%;
+   padding: 10px;
+}
+
+        .navbar{
+            background-color: black;
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float:left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+        .navbar li a{
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: red
+        }
+        .search{
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+        .navbar input{
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+<!--input[type=text],input[type=password],input[type=number],input[type=email],-->
+<!--select,input[type=date]-->
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label
+{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+<br>
+
+ <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'registration' %}">Registration</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br>
+
+<form>
+
+<label> Firstname </label>
+<input type="text" name="firstname" size="15"/> <br> <br>
+<label> Middlename: </label>
+<input type="text" name="middlename" size="15"/> <br> <br>
+<label> Lastname: </label>
+<input type="text" name="lastname" size="15"/> <br> <br>
+
+<label>
+Course :
+</label>
+<select>
+<option value="Course">Course</option>
+<option value="BCA">BCA</option>
+<option value="BBA">BBA</option>
+<option value="B.Tech">B.Tech</option>
+<option value="MBA">MBA</option>
+<option value="MCA">MCA</option>
+<option value="M.Tech">M.Tech</option>
+</select>
+
+<br>
+<br>
+<label>
+Gender :
+</label><br>
+<input type="radio" name="male"/> Male <br>
+<input type="radio" name="female"/> Female <br>
+<input type="radio" name="other"/> Other
+<br>
+<br>
+
+<label>
+Phone :
+</label>
+<input type="text" name="country code"  value="+91" size="2"/>
+<input type="text" name="phone" size="10"/> <br> <br>
+Address
+<br>
+<textarea cols="80" rows="5" value="address">
+</textarea>
+<br> <br>
+Email:
+<input type="email" id="email" name="email"/> <br>
+<br> <br>
+Password:
+<input type="Password" id="pass" name="pass"> <br>
+<br> <br>
+Re-type password:
+<input type="Password" id="repass" name="repass"> <br> <br>
+<input type="button" value="Submit"/>
+</form>
+
+
+</div>
+</div>
+</body>
+</html>
